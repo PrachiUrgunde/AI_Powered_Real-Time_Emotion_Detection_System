@@ -1,0 +1,227 @@
+/* --- GLOBAL RESET --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  /* color: #fff; */
+  overflow-x: hidden;
+  /* clean face detection background */
+  background: url("https://static.tildacdn.com/tild3732-6431-4664-b037-386230346464/what-is-FR.jpg")
+              center/cover no-repeat;
+  background-color: rgba(0,0,0,0.6);
+  background-blend-mode: overlay;
+
+}
+/* clean face detection background */
+  hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-content {
+  max-width: 600px;
+  animation: fadeIn 1.6s ease-out;
+}
+
+/* Title with subtle motion */
+.hero-title {
+    color: aliceblue;
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  animation: slideUp 1.4s ease-out;
+  cursor: default;
+}
+.hero-title:hover {
+  color: #00eaff;
+  transform: scale(1.07);
+  transition: 0.3s ease;
+}
+
+/* Subtitle */
+.hero-subtitle {
+    color: aliceblue;
+  font-size: 1.55rem;
+  opacity: 0.85;
+  margin-bottom: 32px;
+}
+.hero-subtitle:hover {
+    color: #2ec0cd;
+  transform: scale(1.07);
+  transition: 0.3s ease;
+}
+/* SECTION TITLES */
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 16px;
+  color: #00eaff;
+  animation: slideUpFade 1s ease-out;
+}
+
+/* ABOUT SECTION */
+.about {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+.section-text {
+    color: aliceblue;
+  font-size: 1.15rem;
+  opacity: 0.9;
+  line-height: 1.6;
+  animation: fadeIn 1.4s ease-out;
+}
+
+/* HOW IT WORKS SECTION */
+.how-it-works {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+.step {
+  background: rgba(74, 73, 73, 0.947);
+  padding: 18px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  animation: fadeIn 1.6s ease-out;
+}
+.step h3 {
+  color: #aaffff;
+  margin-bottom: 8px;
+}
+.step p {
+  opacity: 0.85;
+  line-height: 1.5;
+}
+
+/* REUSE ANIMATIONS */
+@keyframes slideUpFade {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* RESPONSIVE LAYOUT */
+@media (min-width: 768px) {
+  .steps {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* --- BACKGROUND IMAGE (TECH / FACE DETECTION THEME) --- */
+/* body {
+  background: url("https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg") center/cover no-repeat;
+  background-color: rgba(0,0,0,0.6);
+  background-blend-mode: overlay;
+} */
+
+/* --- HERO LAYOUT --- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-content {
+  max-width: 700px;
+  animation: fadeIn 1.6s ease-out;
+}
+
+/* --- TITLE ANIMATION EFFECT --- */
+.animated-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUpFade 1.5s ease-out forwards;
+  animation-delay: 0.3s;
+  position: relative;
+  display: inline-block;
+  cursor: default;
+}
+
+/* Slide up + fade on load */
+@keyframes slideUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effect with underline animation */
+.animated-title::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  background: #00eaff;
+  margin: 6px auto 0;
+  transition: width 0.4s ease;
+}
+
+.animated-title:hover::after {
+  width: 60%;
+}
+
+/* SUBTITLE */
+.hero-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.85;
+  margin-bottom: 30px;
+  animation: fadeIn 2.2s ease-out;
+}
+
+/* BUTTON */
+.btn-primary {
+  background: #0078ff;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.btn-primary:hover {
+  transform: scale(1.08);
+  background: #005fcc;
+}
+
+/* SIMPLE FADE IN KEYFRAME */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
